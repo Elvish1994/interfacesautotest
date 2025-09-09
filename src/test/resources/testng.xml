@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Allure Test Suite" verbose="2" preserve-order="true">
+
+    <!-- 显式添加 Allure TestNG 监听器 -->
+<!--    <listeners>-->
+<!--        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>-->
+<!--    </listeners>-->
+
+    <!-- preserve-order="true" 非常重要！它确保 <classes> 的顺序被遵守 -->
+    <test name="API Tests" preserve-order="true">
+
+        <!-- 按照以下顺序执行这些测试类 -->
+        <classes>
+            <class name="tests.AccountQueryTest"/>
+            <class name="tests.CreateUserTest"/>
+        </classes>
+
+    </test>
+
+</suite>
