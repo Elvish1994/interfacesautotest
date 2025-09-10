@@ -23,8 +23,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- RestAssured (专为接口测试设计) -->
-        <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+        <!-- RestAssured -->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
@@ -33,7 +32,6 @@
         </dependency>
 
         <!-- Jackson -->
-        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
@@ -42,15 +40,12 @@
         </dependency>
 
         <!-- Log4j2 -->
-        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
             <version>2.24.3</version>
             <scope>test</scope>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
@@ -58,22 +53,14 @@
             <scope>test</scope>
         </dependency>
 
-
-        <!-- JSON Path 支持 -->
+        <!-- JSON Path -->
         <dependency>
             <groupId>com.jayway.jsonpath</groupId>
             <artifactId>json-path</artifactId>
             <version>2.9.0</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>2.0.17</version>
-            <scope>test</scope>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+        <!-- Allure -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
@@ -81,7 +68,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- 读写 Excel (.xls 和 .xlsx) -->
+        <!-- POI -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
@@ -93,48 +80,33 @@
             <version>5.4.1</version>
         </dependency>
 
-        <!-- 如果使用Maven，在pom.xml中添加 -->
-    <!--    <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
-            <version>8.0.33</version>
-        </dependency>-->
-
+        <!-- MySQL -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.33</version> <!-- 建议使用8.0.x系列的最新稳定版本 -->
+            <version>8.0.33</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
+        <!-- JGiven - 仅保留核心和 TestNG 支持 -->
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-dbcp2</artifactId>
-            <version>2.13.0</version>
-            <scope>test</scope>
-        </dependency>
-        <!-- Apache Commons Pool2 (DBCP2 的依赖) -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-pool2</artifactId>
-            <version>2.12.1</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>RELEASE</version>
+            <groupId>com.tngtech.jgiven</groupId>
+            <artifactId>jgiven-core</artifactId>
+            <version>2.0.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
+            <groupId>com.tngtech.jgiven</groupId>
+            <artifactId>jgiven-testng</artifactId>
+            <version>2.0.2</version>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.tngtech.jgiven</groupId>
+                    <artifactId>jgiven-html5-report</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
-
-
     </dependencies>
-
 
     <build>
         <plugins>
@@ -153,5 +125,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
