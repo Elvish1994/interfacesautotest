@@ -1,0 +1,13 @@
+# src/test/resources/config/api-mapping.yml
+mappings:
+  # 文件名: {url: 请求地址, protocol: 协议, method: 请求方法}
+  模板.xlsx:
+    url: /login/time
+    protocol: https
+    method: GET
+    class: moban
+  订单详情.xlsx:
+    url: /order/detail
+    protocol: https
+    method: PUT
+    class: order

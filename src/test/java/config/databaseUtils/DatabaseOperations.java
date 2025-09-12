@@ -7,7 +7,7 @@ import java.util.Map;
  * 数据库操作工具接口
  * 提供基本的CRUD操作和批量操作功能
  */
-public interface DatabaseOperations {
+public  interface DatabaseOperations {
 
     /**
      * 查询单条记录

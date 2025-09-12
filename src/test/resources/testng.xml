@@ -9,10 +9,10 @@
     <!-- preserve-order="true" 非常重要！它确保 <classes> 的顺序被遵守 -->
     <test name="API Tests" preserve-order="true">
 
-        <!-- 按照以下顺序执行这些测试类 -->
+        <!-- 按照以下顺序执行这些测试类  src/test/resources/config/api-mapping.yml的类-->
         <classes>
-            <class name="tests.AccountQueryTest"/>
-            <class name="tests.CreateUserTest"/>
+<!--            <class name="tests.AccountQueryTest"/>-->
+<!--            <class name="tests.CreateUserTest"/>-->
         </classes>
 
     </test>

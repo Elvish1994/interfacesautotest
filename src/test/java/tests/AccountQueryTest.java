@@ -10,9 +10,6 @@ import org.testng.annotations.AfterClass;
 import java.util.List;
 import java.util.Map;
 
-// 假设您有一个具体的实现类，比如 JdbcDatabaseOperations
-// 如果有不同的实现类，请替换为实际的类名
-// import config.databaseUtils.JdbcDatabaseOperations;
 
 public class AccountQueryTest {
 
